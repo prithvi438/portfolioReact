@@ -3,7 +3,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import DarkModeSwitch from './DarkModeSwitch';
 
 const AppNavbar = () => {
-    let colorMode = 'DARK';
+    let colorMode = 'LIGHT';
 
     useEffect(() => {
         colorMode = localStorage.getItem('colorMode')

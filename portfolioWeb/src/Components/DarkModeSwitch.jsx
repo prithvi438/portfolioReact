@@ -11,11 +11,11 @@ const DarkModeSwitch = () => {
     }, [])
     return (
         <div style={{ display: 'flex' }}>
-            <p>Switch to {colorMode == 'DARK' ? 'Dark' : 'Light'}</p>
+            {/* <p>Switch to {colorMode == 'DARK' ? 'Dark' : 'Light'}</p> */}
             <Form.Check // prettier-ignore
                 type="switch"
                 id="custom-switch"
-                label="Check this switch"
+                label="Switch to Dark Mode"
                 onClick={() => {
                     if(localStorage.getItem('colorMode') == 'DARK'){
                         localStorage.setItem(colorMode, 'LIGHT')
