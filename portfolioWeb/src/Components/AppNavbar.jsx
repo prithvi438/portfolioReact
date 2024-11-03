@@ -21,7 +21,7 @@ const AppNavbar = () => {
             <Nav.Link href="#pricing">Teachings</Nav.Link>
           </Nav>
           <Nav.Link href="#pricing" style={{marginRight: '30px'}}>
-            <DarkModeSwitch/>
+            {/* <DarkModeSwitch/> */}
           </Nav.Link>
       </Navbar>
   )

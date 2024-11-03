@@ -1,4 +1,5 @@
 import React from 'react'
+import { IoPersonSharp } from "react-icons/io5";
 
 const IntroSection = () => {
   return (
@@ -22,6 +23,7 @@ const IntroSection = () => {
           height: '180px',
           width: '180px'
         }}>
+          
         </div>
         <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center',  margin: '20px'}}>
           <p style={{fontSize: '26px', margin: '0'}}>Dr. Murari Mandal</p>
