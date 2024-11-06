@@ -1,30 +1,34 @@
-import React, {useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import DarkModeSwitch from './DarkModeSwitch';
+import { NavLink as RouterNavLink } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const AppNavbar = () => {
-    let colorMode = 'LIGHT';
+    // const navigate = useNavigate();
+    const [colorMode, setColorMode] = useState('LIGHT');
 
     useEffect(() => {
-        colorMode = localStorage.getItem('colorMode')
-    }, [localStorage.getItem('colorMode')])
+        const mode = localStorage.getItem('colorMode');
+        setColorMode(mode || 'LIGHT');
+    }, []);
 
-
-  return (
-    <Navbar bg={colorMode == 'DARK' ? "dark" : "light"} data-bs-theme={colorMode == 'DARK' ? "dark" : "light"} >
-          <Navbar.Brand href="#home" style={{marginLeft: '10px'}}>My Portfolio</Navbar.Brand>
+    return (
+        <Navbar bg="light" data-bs-theme="light">
+        <Container>
+          <Navbar.Brand href="/">My Portfolio</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">About</Nav.Link>
-            <Nav.Link href="#features">Publications</Nav.Link>
-            <Nav.Link href="#pricing">Projects</Nav.Link>
-            <Nav.Link href="#pricing">News</Nav.Link>
-            <Nav.Link href="#pricing">Teachings</Nav.Link>
-          </Nav>
-          <Nav.Link href="#pricing" style={{marginRight: '30px'}}>
-            {/* <DarkModeSwitch/> */}
-          </Nav.Link>
-      </Navbar>
-  )
-}
+            
 
-export default AppNavbar
+
+            <Nav.Link href="/publication">Publication</Nav.Link>
+            <Nav.Link href="/project">Project</Nav.Link>
+            <Nav.Link href="/news">News</Nav.Link>
+            <Nav.Link href="/teaching">Teachings</Nav.Link>
+            <Nav.Link href="#pricing">Talks</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    );
+};
+
+export default AppNavbar;
