@@ -7,6 +7,8 @@ import ProjectPage from "../Pages/ProjectPage";
 import NewsPage from "../Pages/NewsPage";
 import TeachingPage from "../Pages/TeachingPage";
 import HomePage from "../Pages/HomePage";
+import ProjectDetailPages from "../Pages/ProjectDetailPages";
+import TalksPage from "../Pages/TalksPage";
 
 
 
@@ -28,12 +30,20 @@ import HomePage from "../Pages/HomePage";
           element: <ProjectPage/>,
         },
         {
+          path: "/project/details",
+          element: <ProjectDetailPages/>,
+        },
+        {
           path: "/news",
           element: <NewsPage/>,
         },
         {
           path: "/teaching",
           element: <TeachingPage/>,
+        },
+        {
+          path: "/talks",
+          element: <TalksPage/>,
         },
       ]
     },

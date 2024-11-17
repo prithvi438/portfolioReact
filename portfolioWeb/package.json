@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://prithvi438.github.io/portfolioWeb",
+  "homepage": "https://prithvi438.github.io/portfolioReact",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
